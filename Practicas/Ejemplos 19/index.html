@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 19</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .image-description {
+            margin-top: 20px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Practica 19</h1>
+    </header>
+    <div class="container">
+
+
+
+<h2>Ejemplo 19:Verificación de campos obligatorios</h2>
+    <form id="miFormulario">
+        <input type="text" name="nombre" placeholder="Nombre" required><br>
+        <input type="email" name="correo" placeholder="Correo" required><br>
+        <button type="button" onclick="verificarCampos()">Verificar Campos</button>
+    </form>
+
+    <script>
+        function verificarCampos() {
+            const formulario = document.getElementById('miFormulario');
+            const camposVacios = Array.from(formulario.querySelectorAll('input:required')).filter(input => !input.value).map(input => input.name);
+            if (camposVacios.length > 0) {
+                alert(`Campos vacíos: ${camposVacios.join(', ')}`);
+            } else {
+                alert('Todos los campos están completos');
+            }
+        }
+    </script>
+        
+
+        <p>
+    &lt;!DOCTYPE html&gt;<br>
+    &lt;html lang=&quot;es&quot;&gt;<br>
+    &lt;head&gt;<br>
+    &nbsp;&nbsp;&lt;meta charset=&quot;UTF-8&quot;&gt;<br>
+    &nbsp;&nbsp;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br>
+    &nbsp;&nbsp;&lt;title&gt;Verificación de campos obligatorios&lt;/title&gt;<br>
+    &lt;/head&gt;<br>
+    &lt;body&gt;<br>
+    <br>
+    &nbsp;&nbsp;&lt;h2&gt;Ejemplo 19: Verificación de campos obligatorios&lt;/h2&gt;<br>
+    &nbsp;&nbsp;&lt;form id=&quot;miFormulario&quot;&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;text&quot; name=&quot;nombre&quot; placeholder=&quot;Nombre&quot; required&gt;&lt;br&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;email&quot; name=&quot;correo&quot; placeholder=&quot;Correo&quot; required&gt;&lt;br&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;button type=&quot;button&quot; onclick=&quot;verificarCampos()&quot;&gt;Verificar Campos&lt;/button&gt;<br>
+    &nbsp;&nbsp;&lt;/form&gt;<br>
+    <br>
+    &nbsp;&nbsp;&lt;script&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;function verificarCampos() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const formulario = document.getElementById(&#39;miFormulario&#39;);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const camposVacios = Array.from(formulario.querySelectorAll(&#39;input:required&#39;)).filter(input =&gt; !input.value).map(input =&gt; input.name);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (camposVacios.length &gt; 0) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(`Campos vacíos: ${camposVacios.join(&#39;, &#39; )}`);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(&#39;Todos los campos están completos&#39;);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&lt;/script&gt;<br>
+    <br>
+    &lt;/body&gt;<br>
+    &lt;/html&gt;<br>
+</p>
+
+
+
+        </div>
+    </div>
+    <a href="../../index.html#" class="back-to-top">Volver</a>
+</body>
+</html>

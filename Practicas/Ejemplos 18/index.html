@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 18</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .image-description {
+            margin-top: 20px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Practica 18</h1>
+    </header>
+    <div class="container">
+
+
+
+ <h2>Ejemplo 18: Filtrado de listas en tiempo real</h2>
+    <input type="text" id="busqueda" oninput="filtrarProductos()" placeholder="Buscar producto">
+    <ul id="listaFiltrada"></ul>
+
+    <script>
+        const productos = [
+            { nombre: 'Manzana' },
+            { nombre: 'Banana' },
+            { nombre: 'Pera' }
+        ];
+
+        function filtrarProductos() {
+            const busqueda = document.getElementById('busqueda').value.toLowerCase();
+            const lista = document.getElementById('listaFiltrada');
+            lista.innerHTML = '';
+            const productosFiltrados = productos.filter(producto => producto.nombre.toLowerCase().includes(busqueda));
+            productosFiltrados.forEach(producto => {
+                const li = document.createElement('li');
+                li.textContent = producto.nombre;
+                lista.appendChild(li);
+            });
+        }
+    </script>
+
+<p>
+    &lt;!DOCTYPE html&gt;<br>
+    &lt;html lang=&quot;es&quot;&gt;<br>
+    &lt;head&gt;<br>
+    &nbsp;&nbsp;&lt;meta charset=&quot;UTF-8&quot;&gt;<br>
+    &nbsp;&nbsp;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br>
+    &nbsp;&nbsp;&lt;title&gt;Filtrado de listas en tiempo real&lt;/title&gt;<br>
+    &lt;/head&gt;<br>
+    &lt;body&gt;<br>
+    <br>
+    &nbsp;&nbsp;&lt;h2&gt;Ejemplo 18: Filtrado de listas en tiempo real&lt;/h2&gt;<br>
+    &nbsp;&nbsp;&lt;input type=&quot;text&quot; id=&quot;busqueda&quot; oninput=&quot;filtrarProductos()&quot; placeholder=&quot;Buscar producto&quot;&gt;<br>
+    &nbsp;&nbsp;&lt;ul id=&quot;listaFiltrada&quot;&gt;&lt;/ul&gt;<br>
+    <br>
+    &nbsp;&nbsp;&lt;script&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;const productos = [<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ nombre: &#39;Manzana&#39; },<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ nombre: &#39;Banana&#39; },<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ nombre: &#39;Pera&#39; }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;];<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;function filtrarProductos() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const busqueda = document.getElementById(&#39;busqueda&#39;).value.toLowerCase();<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const lista = document.getElementById(&#39;listaFiltrada&#39;);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lista.innerHTML = &#39;&#39;;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const productosFiltrados = productos.filter(producto =&gt; producto.nombre.toLowerCase().includes(busqueda));<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;productosFiltrados.forEach(producto =&gt; {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const li = document.createElement(&#39;li&#39;);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;li.textContent = producto.nombre;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lista.appendChild(li);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&lt;/script&gt;<br>
+    <br>
+    &lt;/body&gt;<br>
+    &lt;/html&gt;<br>
+</p>
+
+
+       
+        </div>
+    </div>
+    <a href="../../index.html#" class="back-to-top">Volver</a>
+</body>
+</html>

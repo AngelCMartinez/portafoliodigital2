@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 16</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .image-description {
+            margin-top: 20px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Practica 16</h1>
+    </header>
+    <div class="container">
+
+
+
+
+        <h2>Ejemplo 16: Buscar el usuario más joven en un array de objetos</h2>
+<button onclick="mostrarUsuarioMasJoven()">Mostrar Usuario Más Joven</button>
+<p>Usuario más joven: <span id="usuarioMasJoven"></span></p>
+
+<script>
+    const usuarios = [
+        { nombre: 'Ana', edad: 30 },
+        { nombre: 'Juan', edad: 25 },
+        { nombre: 'Pedro', edad: 35 }
+    ];
+
+    const usuarioMasJoven = usuarios.sort((a, b) => a.edad - b.edad)[0];
+
+    function mostrarUsuarioMasJoven() {
+        document.getElementById('usuarioMasJoven').innerText = `${usuarioMasJoven.nombre}, ${usuarioMasJoven.edad} años`;
+    }
+</script>
+
+<p>
+    &lt;!DOCTYPE html&gt;<br>
+    &lt;html lang=&quot;es&quot;&gt;<br>
+    &lt;head&gt;<br>
+    &nbsp;&nbsp;&lt;meta charset=&quot;UTF-8&quot;&gt;<br>
+    &nbsp;&nbsp;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br>
+    &nbsp;&nbsp;&lt;title&gt;Ejemplo 16: Usuario más joven&lt;/title&gt;<br>
+    &lt;/head&gt;<br>
+    &lt;body&gt;<br>
+    <br>
+    &nbsp;&nbsp;&lt;h2&gt;Ejemplo 16: Buscar el usuario más joven en un array de objetos&lt;/h2&gt;<br>
+    &nbsp;&nbsp;&lt;button onclick=&quot;mostrarUsuarioMasJoven()&quot;&gt;Mostrar Usuario Más Joven&lt;/button&gt;<br>
+    &nbsp;&nbsp;&lt;p&gt;Usuario más joven: &lt;span id=&quot;usuarioMasJoven&quot;&gt;&lt;/span&gt;&lt;/p&gt;<br>
+    <br>
+    &nbsp;&nbsp;&lt;script&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;const usuarios = [<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ nombre: &#39;Ana&#39;, edad: 30 },<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ nombre: &#39;Juan&#39;, edad: 25 },<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ nombre: &#39;Pedro&#39;, edad: 35 }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;];<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;const usuarioMasJoven = usuarios.sort((a, b) =&gt; a.edad - b.edad)[0];<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;function mostrarUsuarioMasJoven() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(&#39;usuarioMasJoven&#39;).innerText = `${usuarioMasJoven.nombre}, ${usuarioMasJoven.edad} años`; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&lt;/script&gt;<br>
+    <br>
+    &lt;/body&gt;<br>
+    &lt;/html&gt;<br>
+</p>
+
+
+
+        </div>
+    </div>
+    <a href="../../index.html#" class="back-to-top">Volver</a>
+</body>
+</html>

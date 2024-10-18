@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .image-description {
+            margin-top: 20px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Practica 6</h1>
+    </header>
+    <div class="container">
+
+
+
+
+       <h2>Ejemplo 6: Uso de filter en Arrays</h2>
+    <button onclick="mostrarPares()">Mostrar Números Pares</button>
+    <p>Números pares: <span id="pares"></span></p>
+
+    <script>
+        const numeros = [1, 2, 3, 4, 5];
+        function mostrarPares() {
+            const pares = numeros.filter(numero => numero % 2 === 0);
+            document.getElementById('pares').innerText = pares.join(', ');
+        }
+    </script>
+
+<p>
+    &lt;!DOCTYPE html&gt;<br>
+    &lt;html lang=&quot;es&quot;&gt;<br>
+    &lt;head&gt;<br>
+    &nbsp;&nbsp;&lt;meta charset=&quot;UTF-8&quot;&gt;<br>
+    &nbsp;&nbsp;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br>
+    &nbsp;&nbsp;&lt;title&gt;Ejemplo filter en Arrays&lt;/title&gt;<br>
+    &lt;/head&gt;<br>
+    &lt;body&gt;<br>
+    <br>
+    &nbsp;&nbsp;&lt;h2&gt;Ejemplo: Uso de filter en Arrays&lt;/h2&gt;<br>
+    &nbsp;&nbsp;&lt;button onclick=&quot;mostrarPares()&quot;&gt;Mostrar Números Pares&lt;/button&gt;<br>
+    &nbsp;&nbsp;&lt;p&gt;Números pares: &lt;span id=&quot;pares&quot;&gt;&lt;/span&gt;&lt;/p&gt;<br>
+    <br>
+    &nbsp;&nbsp;&lt;script&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;const numeros = [1, 2, 3, 4, 5];<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;function mostrarPares() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const pares = numeros.filter(numero =&gt; numero % 2 === 0);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(&#039;pares&#039;).innerText = pares.join(&#039;, &#039;);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&lt;/script&gt;<br>
+    <br>
+    &lt;/body&gt;<br>
+    &lt;/html&gt;<br>
+</p>
+
+        </div>
+    </div>
+    <a href="../../index.html#" class="back-to-top">Volver</a>
+</body>
+</html>

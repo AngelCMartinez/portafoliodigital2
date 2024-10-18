@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .image-description {
+            margin-top: 20px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Practica 3</h1>
+    </header>
+    <div class="container">
+
+
+
+
+
+       <h2>Ejemplo 3: Función de orden superior con closures</h2>
+    <button onclick="duplicarNumero()">Duplicar Número</button>
+    <button onclick="triplicarNumero()">Triplicar Número</button>
+    <p id="resultadoMultiplicador"></p>
+
+    <script>
+        function crearMultiplicador(factor) {
+            return function(numero) {
+                return numero * factor;
+            };
+        }
+
+        const duplicar = crearMultiplicador(2);
+        const triplicar = crearMultiplicador(3);
+
+        function duplicarNumero() {
+            document.getElementById('resultadoMultiplicador').innerText = duplicar(5);
+        }
+
+        function triplicarNumero() {
+            document.getElementById('resultadoMultiplicador').innerText = triplicar(7);
+        }
+    </script>
+   
+
+<p>
+    &lt;!DOCTYPE html&gt;<br>
+    &lt;html lang=&quot;es&quot;&gt;<br>
+    &lt;head&gt;<br>
+    &nbsp;&nbsp;&lt;meta charset=&quot;UTF-8&quot;&gt;<br>
+    &nbsp;&nbsp;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br>
+    &nbsp;&nbsp;&lt;title&gt;Ejemplo 3: Función de Orden Superior&lt;/title&gt;<br>
+    &lt;/head&gt;<br>
+    &lt;body&gt;<br>
+    &nbsp;&nbsp;&lt;h2&gt;Ejemplo 3: Función de orden superior con closures&lt;/h2&gt;<br>
+    &nbsp;&nbsp;&lt;button onclick=&quot;duplicarNumero()&quot;&gt;Duplicar Número&lt;/button&gt;<br>
+    &nbsp;&nbsp;&lt;button onclick=&quot;triplicarNumero()&quot;&gt;Triplicar Número&lt;/button&gt;<br>
+    &nbsp;&nbsp;&lt;p id=&quot;resultadoMultiplicador&quot;&gt;&lt;/p&gt;<br>
+    &nbsp;&nbsp;&lt;script&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;function crearMultiplicador(factor) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return function(numero) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return numero * factor;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;const duplicar = crearMultiplicador(2);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;const triplicar = crearMultiplicador(3);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;function duplicarNumero() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(&#039;resultadoMultiplicador&#039;).innerText = duplicar(5);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;function triplicarNumero() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(&#039;resultadoMultiplicador&#039;).innerText = triplicar(7);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&lt;/script&gt;<br>
+    &lt;/body&gt;<br>
+    &lt;/html&gt;<br>
+</p>
+
+
+
+        </div>
+    </div>
+    <a href="../../index.html#" class="back-to-top">Volver</a>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 15</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .image-description {
+            margin-top: 20px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Practica 15</h1>
+    </header>
+    <div class="container">
+
+
+<h2>Ejemplo 15: Crear una función que combine map y filter</h2>
+<button onclick="mostrarNumerosParesDoblados()">Mostrar Números Pares Doblados</button>
+<p>Números pares doblados: <span id="numerosParesDoblados"></span></p>
+
+<script>
+    function mapearYFiltrar(array, mapeo, filtro) {
+        return array.map(mapeo).filter(filtro);
+    }
+
+    const numeros = [1, 2, 3, 4, 5];
+    const numerosParesDoblados = mapearYFiltrar(numeros, numero => numero * 2, numero => numero % 2 === 0);
+
+    function mostrarNumerosParesDoblados() {
+        document.getElementById('numerosParesDoblados').innerText = numerosParesDoblados.join(', ');
+    }
+</script>
+
+<p>
+    &lt;!DOCTYPE html&gt;<br>
+    &lt;html lang=&quot;es&quot;&gt;<br>
+    &lt;head&gt;<br>
+    &nbsp;&nbsp;&lt;meta charset=&quot;UTF-8&quot;&gt;<br>
+    &nbsp;&nbsp;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br>
+    &nbsp;&nbsp;&lt;title&gt;Ejemplo 15: Map y Filter Combinados&lt;/title&gt;<br>
+    &lt;/head&gt;<br>
+    &lt;body&gt;<br>
+    <br>
+    &nbsp;&nbsp;&lt;h2&gt;Ejemplo 15: Crear una función que combine map y filter&lt;/h2&gt;<br>
+    &nbsp;&nbsp;&lt;button onclick=&quot;mostrarNumerosParesDoblados()&quot;&gt;Mostrar Números Pares Doblados&lt;/button&gt;<br>
+    &nbsp;&nbsp;&lt;p&gt;Números pares doblados: &lt;span id=&quot;numerosParesDoblados&quot;&gt;&lt;/span&gt;&lt;/p&gt;<br>
+    <br>
+    &nbsp;&nbsp;&lt;script&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;function mapearYFiltrar(array, mapeo, filtro) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return array.map(mapeo).filter(filtro);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;const numeros = [1, 2, 3, 4, 5];<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;const numerosParesDoblados = mapearYFiltrar(numeros, numero =&gt; numero * 2, numero =&gt; numero % 2 === 0);<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;function mostrarNumerosParesDoblados() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(&#39;numerosParesDoblados&#39;).innerText = numerosParesDoblados.join(&#39;, &#39;);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&lt;/script&gt;<br>
+    <br>
+    &lt;/body&gt;<br>
+    &lt;/html&gt;<br>
+</p>
+
+
+         
+        </div>
+    </div>
+    <a href="../../index.html#" class="back-to-top">Volver</a>
+</body>
+</html>

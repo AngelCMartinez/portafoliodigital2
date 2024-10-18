@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 9</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .image-description {
+            margin-top: 20px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Practica 9</h1>
+    </header>
+    <div class="container">
+
+
+
+
+         <script>
+        function filtrarPorPropiedad(array, propiedad, valor) {
+            return array.filter(elemento => elemento[propiedad] === valor);
+        }
+
+        const personas = [
+            { nombre: 'Ana', edad: 30 },
+            { nombre: 'Juan', edad: 25 },
+            { nombre: 'Pedro', edad: 35 }
+        ];
+
+        function mostrarFiltrado() {
+            const resultado = filtrarPorPropiedad(personas, 'edad', 30);
+            alert("Resultado del filtro: " + JSON.stringify(resultado));
+        }
+    </script>
+    <h1>Ejemplo 9: Filtrar por Propiedad</h1>
+    <button onclick="mostrarFiltrado()">Filtrar por Edad 30</button>
+
+<p>
+    &lt;!DOCTYPE html&gt;<br>
+    &lt;html lang=&quot;es&quot;&gt;<br>
+    &lt;head&gt;<br>
+    &nbsp;&nbsp;&lt;meta charset=&quot;UTF-8&quot;&gt;<br>
+    &nbsp;&nbsp;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br>
+    &nbsp;&nbsp;&lt;title&gt;Filtrar por Propiedad&lt;/title&gt;<br>
+    &nbsp;&nbsp;&lt;script&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;function filtrarPorPropiedad(array, propiedad, valor) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return array.filter(elemento =&gt; elemento[propiedad] === valor);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;const personas = [<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ nombre: &apos;Ana&apos;, edad: 30 },<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ nombre: &apos;Juan&apos;, edad: 25 },<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ nombre: &apos;Pedro&apos;, edad: 35 }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;];<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;function mostrarFiltrado() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const resultado = filtrarPorPropiedad(personas, &apos;edad&apos;, 30);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(&quot;Resultado del filtro: &quot; + JSON.stringify(resultado));<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&lt;/script&gt;<br>
+    &nbsp;&nbsp;&lt;h1&gt;Filtrar por Propiedad&lt;/h1&gt;<br>
+    &nbsp;&nbsp;&lt;button onclick=&quot;mostrarFiltrado()&quot;&gt;Filtrar por Edad 30&lt;/button&gt;<br>
+    &lt;/head&gt;<br>
+    &lt;body&gt;<br>
+    
+    &lt;/body&gt;<br>
+    &lt;/html&gt;<br>
+</p>
+
+
+        </div>
+    </div>
+    <a href="../../index.html#" class="back-to-top">Volver</a>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .image-description {
+            margin-top: 20px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Practica 2</h1>
+    </header>
+    <div class="container">
+
+
+        <h2>Ejemplo 2: Encapsulación con closures</h2>
+    <button onclick="incrementarModulo()">Incrementar</button>
+    <p id="moduloValor"></p>
+
+    <script>
+        function crearMódulo(valorInicial) {
+            let valor = valorInicial;
+
+            return {
+                incrementar: function() {
+                    valor++;
+                },
+                obtenerValor: function() {
+                    return valor;
+                }
+            };
+        }
+
+        const miModulo = crearMódulo(10);
+
+        function incrementarModulo() {
+            miModulo.incrementar();
+            document.getElementById('moduloValor').innerText = miModulo.obtenerValor();
+        }
+    </script>
+   
+   <p>
+    &lt;!DOCTYPE html&gt;<br>
+    &lt;html lang=&quot;es&quot;&gt;<br>
+    &lt;head&gt;<br>
+    &nbsp;&nbsp;&lt;meta charset=&quot;UTF-8&quot;&gt;<br>
+    &nbsp;&nbsp;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br>
+    &nbsp;&nbsp;&lt;title&gt;Ejemplo 2: Encapsulación con Closures&lt;/title&gt;<br>
+    &lt;/head&gt;<br>
+    &lt;body&gt;<br>
+    &nbsp;&nbsp;&lt;h2&gt;Ejemplo 2: Encapsulación con closures&lt;/h2&gt;<br>
+    &nbsp;&nbsp;&lt;button onclick=&quot;incrementarModulo()&quot;&gt;Incrementar&lt;/button&gt;<br>
+    &nbsp;&nbsp;&lt;p id=&quot;moduloValor&quot;&gt;&lt;/p&gt;<br>
+    &nbsp;&nbsp;&lt;script&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;function crearMódulo(valorInicial) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let valor = valorInicial;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;incrementar: function() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valor++;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obtenerValor: function() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return valor;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;const miModulo = crearMódulo(10);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;function incrementarModulo() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;miModulo.incrementar();<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(&#039;moduloValor&#039;).innerText = miModulo.obtenerValor();<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&lt;/script&gt;<br>
+    &lt;/body&gt;<br>
+    &lt;/html&gt;<br>
+</p>
+
+        </div>
+
+
+
+
+    </div>
+    <a href="../../index.html#" class="back-to-top">Volver</a>
+</body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Todos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .image-description {
+            margin-top: 20px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Todas las practicas</h1>
+    </header>
+    <div class="container">
+
+
+     <!-- Sección 1 -->
+    <h1>Sección 1: Ejemplos de Closures y Funciones de Orden Superior</h1>
+
+    <h2>Ejemplo 1: Crear un contador con closures</h2>
+    <button onclick="incrementarContador()">Incrementar Contador</button>
+    <p>Valor del contador: <span id="contadorValor">0</span></p>
+
+    <h2>Ejemplo 2: Encapsulación con closures</h2>
+    <button onclick="incrementarModulo()">Incrementar Módulo</button>
+    <p>Valor del módulo: <span id="moduloValor">10</span></p>
+
+    <h2>Ejemplo 3: Función de orden superior con closures</h2>
+    <button onclick="duplicarNumero()">Duplicar Número</button>
+    <button onclick="triplicarNumero()">Triplicar Número</button>
+    <p>Resultado de la multiplicación: <span id="resultadoMultiplicador">0</span></p>
+
+    <h2>Ejemplo 4: Uso de map en Arrays</h2>
+    <button onclick="mostrarCuadrados()">Mostrar Cuadrados</button>
+    <p>Cuadrados de los números: <span id="cuadrados"></span></p>
+
+    <!-- Sección 2 -->
+    <h1>Sección 2: Ejemplos de Funciones en Arrays</h1>
+
+    <h2>Ejemplo 5: Uso de filter en Arrays</h2>
+    <button onclick="mostrarPares()">Mostrar Números Pares</button>
+    <p>Números pares: <span id="pares"></span></p>
+
+    <h2>Ejemplo 6: Uso de reduce en Arrays</h2>
+    <button onclick="calcularSuma()">Calcular Suma</button>
+    <p>Suma total: <span id="suma"></span></p>
+
+    <h2>Ejemplo 7: Uso de forEach en Arrays</h2>
+    <button onclick="mostrarNombres()">Mostrar Nombres</button>
+    <p>Nombres mostrados en consola</p>
+
+    <!-- Sección 3 -->
+    <h1>Sección 3: Ejemplos Avanzados de Arrays y Métodos Encadenados</h1>
+
+    <h2>Ejemplo 8: Crear una función que combine map y filter</h2>
+    <button onclick="mostrarNumerosParesDoblados()">Mostrar Números Pares Doblados</button>
+    <p>Números pares doblados: <span id="numerosParesDoblados"></span></p>
+
+    <h2>Ejemplo 9: Combinación de métodos (filter y map)</h2>
+    <button onclick="mostrarNumerosParesCuadrados()">Mostrar Números Pares Cuadrados</button>
+    <p>Números pares cuadrados: <span id="numerosParesCuadrados"></span></p>
+
+    <h2>Ejemplo 10: Buscar el usuario más joven en un array de objetos</h2>
+    <button onclick="mostrarUsuarioMasJoven()">Mostrar Usuario Más Joven</button>
+    <p>Usuario más joven: <span id="usuarioMasJoven"></span></p>
+
+    <h2>Ejemplo 11: Calcular el promedio de un array de números</h2>
+    <button onclick="mostrarPromedio()">Calcular Promedio</button>
+    <p>Promedio: <span id="promedio"></span></p>
+
+    <h2>Ejemplo 12: Crear una lista HTML a partir de un array de objetos</h2>
+    <button onclick="mostrarListaProductos()">Mostrar Lista de Productos</button>
+    <ul id="listaProductos"></ul>
+
+    <!-- Sección 4: Nuevos Ejemplos -->
+    <h1>Sección 4: Nuevos Ejemplos Agregados</h1>
+
+    <h2>Ejemplo 13: Creación de elementos dinámicos</h2>
+    <button onclick="mostrarListaProductosDinamicos()">Mostrar Lista de Productos</button>
+    <ul id="listaProductosDinamicos"></ul>
+
+    <h2>Ejemplo 14: Filtrado y ordenamiento de elementos</h2>
+    <button onclick="mostrarTareasPendientes()">Mostrar Tareas Pendientes</button>
+    <ul id="listaTareas"></ul>
+
+    <h2>Ejemplo 15: Verificación de campos obligatorios</h2>
+    <form id="miFormulario">
+        <input type="text" name="nombre" placeholder="Nombre" required><br>
+        <input type="email" name="correo" placeholder="Correo" required><br>
+        <button type="button" onclick="verificarCampos()">Verificar Campos</button>
+    </form>
+
+    <h2>Ejemplo 16: Filtrado de listas en tiempo real</h2>
+    <input type="text" id="busqueda" oninput="filtrarProductos()" placeholder="Buscar producto">
+    <ul id="listaFiltrada"></ul>
+
+    <h2>Ejemplo 17: Procesamiento de datos de API - Transformar datos JSON</h2>
+    <button onclick="mostrarUsuarios()">Mostrar Usuarios</button>
+    <ul id="listaUsuarios"></ul>
+
+    <h2>Ejemplo 18: Agrupar y sumarizar datos</h2>
+    <button onclick="mostrarVentas()">Mostrar Ventas</button>
+    <ul id="listaVentas"></ul>
+
+    <h2>Ejemplo 19: Agrupación y Sumarización de Compras</h2>
+    <button onclick="mostrarComprasTotales()">Mostrar Compras Totales</button>
+    <ul id="comprasTotalesLista"></ul>
+
+    <h2>Ejemplo 20: Procesar Datos de una API</h2>
+    <button onclick="obtenerDatosYMostrar()">Cargar Datos</button>
+    <ul id="listaDatosProcesados"></ul>
+
+
+
+    <script>
+        // Sección 1
+        function crearContador() {
+            let contador = 0;
+            return function() {
+                contador++;
+                return contador;
+            };
+        }
+        const miContador = crearContador();
+        function incrementarContador() {
+            const contadorActual = miContador();
+            document.getElementById('contadorValor').innerText = contadorActual;
+        }
+
+        function crearMódulo(valorInicial) {
+            let valor = valorInicial;
+            return {
+                incrementar: function() {
+                    valor++;
+                },
+                obtenerValor: function() {
+                    return valor;
+                }
+            };
+        }
+        const miModulo = crearMódulo(10);
+        function incrementarModulo() {
+            miModulo.incrementar();
+            const valorModulo = miModulo.obtenerValor();
+            document.getElementById('moduloValor').innerText = valorModulo;
+        }
+
+        function crearMultiplicador(factor) {
+            return function(numero) {
+                return numero * factor;
+            };
+        }
+        const duplicar = crearMultiplicador(2);
+        const triplicar = crearMultiplicador(3);
+        function duplicarNumero() {
+            const resultado = duplicar(5);
+            document.getElementById('resultadoMultiplicador').innerText = resultado;
+        }
+        function triplicarNumero() {
+            const resultado = triplicar(7);
+            document.getElementById('resultadoMultiplicador').innerText = resultado;
+        }
+
+        const numeros = [1, 2, 3, 4, 5];
+        const cuadrados = numeros.map(numero => numero * numero);
+        function mostrarCuadrados() {
+            document.getElementById('cuadrados').innerText = cuadrados.join(', ');
+        }
+
+        // Sección 2
+        function mostrarPares() {
+            const pares = numeros.filter(numero => numero % 2 === 0);
+            document.getElementById('pares').innerText = pares.join(', ');
+        }
+
+        function calcularSuma() {
+            const suma = numeros.reduce((acumulador, numero) => acumulador + numero, 0);
+            document.getElementById('suma').innerText = suma;
+        }
+
+        function mostrarNombres() {
+            const nombres = ['Ana', 'Juan', 'Pedro'];
+            nombres.forEach(nombre => console.log(nombre));
+            alert('Nombres mostrados en consola');
+        }
+
+        // Sección 3
+        function mapearYFiltrar(array, mapeo, filtro) {
+            return array.map(mapeo).filter(filtro);
+        }
+
+        const numerosParesDoblados = mapearYFiltrar(numeros, numero => numero * 2, numero => numero % 2 === 0);
+        function mostrarNumerosParesDoblados() {
+            document.getElementById('numerosParesDoblados').innerText = numerosParesDoblados.join(', ');
+        }
+
+        const numerosParesCuadrados = numeros.filter(num => num % 2 === 0).map(num => num * num);
+        function mostrarNumerosParesCuadrados() {
+            document.getElementById('numerosParesCuadrados').innerText = numerosParesCuadrados.join(', ');
+        }
+
+        const usuarios = [
+            { nombre: 'Ana', edad: 30 },
+            { nombre: 'Juan', edad: 25 },
+            { nombre: 'Pedro', edad: 35 }
+        ];
+
+       
+ function mostrarUsuarioMasJoven() {
+            const usuarioMasJoven = usuarios.reduce((prev, curr) => (prev.edad < curr.edad ? prev : curr));
+            document.getElementById('usuarioMasJoven').innerText = `${usuarioMasJoven.nombre}, ${usuarioMasJoven.edad} años`;
+        }
+
+        function mostrarPromedio() {
+            const promedio = numeros.reduce((acum, num) => acum + num, 0) / numeros.length;
+            document.getElementById('promedio').innerText = promedio;
+        }
+
+        function mostrarListaProductos() {
+            const productos = ['Producto 1', 'Producto 2', 'Producto 3'];
+            const lista = document.getElementById('listaProductos');
+            lista.innerHTML = '';
+            productos.forEach(producto => {
+                const li = document.createElement('li');
+                li.textContent = producto;
+                lista.appendChild(li);
+            });
+        }
+
+        // Sección 4: Nuevos Ejemplos
+        const productosDinamicos = ['Producto A', 'Producto B', 'Producto C'];
+
+        function mostrarListaProductosDinamicos() {
+            const lista = document.getElementById('listaProductosDinamicos');
+            lista.innerHTML = '';
+            productosDinamicos.forEach(producto => {
+                const li = document.createElement('li');
+                li.textContent = producto;
+                lista.appendChild(li);
+            });
+        }
+
+        const tareas = [
+            { nombre: 'Tarea 1', completada: true },
+            { nombre: 'Tarea 2', completada: false },
+            { nombre: 'Tarea 3', completada: true }
+        ];
+
+        function mostrarTareasPendientes() {
+            const lista = document.getElementById('listaTareas');
+            lista.innerHTML = '';
+            tareas.filter(tarea => !tarea.completada).forEach(tarea => {
+                const li = document.createElement('li');
+                li.textContent = tarea.nombre;
+                lista.appendChild(li);
+            });
+        }
+
+        function verificarCampos() {
+            const formulario = document.getElementById('miFormulario');
+            const campos = [...formulario.elements].filter(element => element.required && !element.value);
+            if (campos.length > 0) {
+                alert('Los siguientes campos son obligatorios: ' + campos.map(campo => campo.placeholder).join(', '));
+            } else {
+                alert('Todos los campos obligatorios están llenos.');
+            }
+        }
+
+        const productosFiltrados = ['Producto A', 'Producto B', 'Producto C', 'Producto D'];
+
+        function filtrarProductos() {
+            const busqueda = document.getElementById('busqueda').value.toLowerCase();
+            const lista = document.getElementById('listaFiltrada');
+            lista.innerHTML = '';
+            productosFiltrados.filter(producto => producto.toLowerCase().includes(busqueda)).forEach(producto => {
+                const li = document.createElement('li');
+                li.textContent = producto;
+                lista.appendChild(li);
+            });
+        }
+
+        const usuariosApi = [
+            { nombre: 'Carlos', edad: 28 },
+            { nombre: 'Marta', edad: 22 },
+            { nombre: 'Luis', edad: 35 }
+        ];
+
+        function mostrarUsuarios() {
+            const lista = document.getElementById('listaUsuarios');
+            lista.innerHTML = '';
+            usuariosApi.forEach(usuario => {
+                const li = document.createElement('li');
+                li.textContent = `${usuario.nombre}, ${usuario.edad} años`;
+                lista.appendChild(li);
+            });
+        }
+
+                const ventas = [
+                    { producto: 'Producto A', cantidad: 3 },
+                    { producto: 'Producto B', cantidad: 1 },
+                    { producto: 'Producto C', cantidad: 2 }
+                ];
+
+                function mostrarVentas() {
+                    const lista = document.getElementById('listaVentas');
+                    lista.innerHTML = '';
+                    ventas.forEach(venta => {
+                        const li = document.createElement('li');
+                        li.textContent = `${venta.producto}: ${venta.cantidad}`;
+                        lista.appendChild(li);
+                    });
+                }
+
+                const compras = [
+            { usuario: 'Ana', total: 100 },
+            { usuario: 'Juan', total: 200 },
+            { usuario: 'Pedro', total: 150 },
+            { usuario: 'Ana', total: 50 }
+        ];
+
+        const comprasTotalesPorUsuario = compras.reduce((totales, compra) => {
+            if (!totales[compra.usuario]) {
+                totales[compra.usuario] = 0;
+            }
+            totales[compra.usuario] += compra.total;
+            return totales;
+        }, {});
+
+        function mostrarComprasTotales() {
+            const listaCompras = Object.entries(comprasTotalesPorUsuario).map(([usuario, total]) => `<li>${usuario}: $${total}</li>`).join('');
+            document.getElementById('comprasTotalesLista').innerHTML = listaCompras;
+        }
+
+
+
+
+        async function obtenerDatos() {
+            try {
+                const respuesta = await fetch('https://rickandmortyapi.com/api/character');
+                if (!respuesta.ok) {
+                    throw new Error('Error al obtener los datos');
+                }
+
+                const datos = await respuesta.json();
+                return datos.results.slice(0, 5).map(personaje => ({
+                    id: personaje.id,
+                    nombre: personaje.name,
+                    imagen: personaje.image
+                }));
+            } catch (error) {
+                console.error('Error en obtenerDatos:', error);
+                return [];
+            }
+        }
+
+        async function obtenerDatosYMostrar() {
+            const datos = await obtenerDatos();
+            const listaDatos = document.getElementById('listaDatosProcesados');
+            listaDatos.innerHTML = '';
+
+            if (datos.length > 0) {
+                const elementos = datos.map(dato => 
+                    `<li><strong>${dato.id}:</strong> ${dato.nombre} <br> <img src="${dato.imagen}" alt="${dato.nombre}" width="100"></li>`
+                ).join('');
+                
+                listaDatos.innerHTML = elementos;
+            } else {
+                listaDatos.innerHTML = '<li>No se encontraron datos.</li>';
+            }
+        }
+
+
+
+
+
+    </script>
+
+    
+       
+
+        </div>
+    </div>
+    <a href="../../index.html#" class="back-to-top">Volver</a>
+</body>
+</html>
