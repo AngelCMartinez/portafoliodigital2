@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 21</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .image-description {
+            margin-top: 20px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #output {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e0ffe0;
+            border: 1px solid #00a000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Practica 21</h1>
+    </header>
+    <div class="container">
+
+
+ 
+    <h1>Ejemplo 21: Pipeline Reutilizable con Apache Airflow</h1>
+
+    <section>
+        <h2>1. Extract Data</h2>
+        <p>Este es el código para extraer datos de una fuente.</p>
+        <pre>
+def extract_data():
+    # Código para extraer datos de una fuente
+    print("Extrayendo datos...")
+        </pre>
+        <button onclick="extractData()">Ejecutar Extract Data</button>
+        <div id="output-extract"></div>
+    </section>
+
+    <section>
+        <h2>2. Transform Data</h2>
+        <p>Este es el código para transformar los datos.</p>
+        <pre>
+def transform_data():
+    # Código para transformar los datos
+    print("Transformando datos...")
+        </pre>
+        <button onclick="transformData()">Ejecutar Transform Data</button>
+        <div id="output-transform"></div>
+    </section>
+
+    <section>
+        <h2>3. Load Data</h2>
+        <p>Este es el código para cargar los datos en un destino.</p>
+        <pre>
+def load_data():
+    # Código para cargar los datos en un destino
+    print("Cargando datos...")
+        </pre>
+        <button onclick="loadData()">Ejecutar Load Data</button>
+        <div id="output-load"></div>
+    </section>
+
+    <section>
+        <h2>Beneficios de los Pipelines Reutilizables</h2>
+        <ul>
+            <li>Ahorro de tiempo: Evita la duplicación de código.</li>
+            <li>Mayor calidad: Reduce la probabilidad de errores.</li>
+            <li>Mayor flexibilidad: Permite crear pipelines personalizados a partir de componentes reutilizables.</li>
+            <li>Facilita la colaboración: Permite a diferentes equipos trabajar en diferentes partes del pipeline.</li>
+        </ul>
+    </section>
+
+    <script>
+        // Simulación de ejecución de código
+        function extractData() {
+            document.getElementById('output-extract').innerHTML = '<div id="output">Extrayendo datos...</div>';
+        }
+
+        function transformData() {
+            document.getElementById('output-transform').innerHTML = '<div id="output">Transformando datos...</div>';
+        }
+
+        function loadData() {
+            document.getElementById('output-load').innerHTML = '<div id="output">Cargando datos...</div>';
+        }
+    </script>
+
+       
+
+        </div>
+    </div>
+    <a href="../../index.html#" class="back-to-top">Volver</a>
+</body>
+</html>
